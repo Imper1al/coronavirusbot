@@ -13,10 +13,10 @@ bot = telebot.TeleBot('980573609:AAH6xwvvXgQQ_rLwJ5PUuGzUvviEnwnFsDg')
 @bot.message_handler(commands=['start'])
 def start(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
-    btn1 = types.KeyboardButton('Во всём мире')
-    btn2 = types.KeyboardButton('Украина')
-    btn3 = types.KeyboardButton('Россия')
-    btn4 = types.KeyboardButton('Беларусь')
+    btn1 = types.KeyboardButton('Во всём мире', switch_inline_query = "ds")
+    btn2 = types.KeyboardButton('Украина', switch_inline_query = "dds")
+    btn3 = types.KeyboardButton('Россия', switch_inline_query = "sdd")
+    btn4 = types.KeyboardButton('Беларусь', switch_inline_query = "sd")
     markup.add(btn1, btn2, btn3, btn4)
 
     send_message = f"<b>Привет {message.from_user.first_name}!</b><br>Чтобы узнать данные про коронавируса напишите " \
